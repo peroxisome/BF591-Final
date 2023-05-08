@@ -16,7 +16,7 @@ source('functions.R')
 ui <- fluidPage(
   titlePanel('BF591 Final Project'),
   'Created by Jou-Hsuan Lee', br(),
-  "This is an R Shiny application designed to explore the RNA sequence analysis results of the human brain affected by Huntington's disease. The data is from ",
+  "This is an R Shiny application designed to explore the RNA sequence analysis results of the human brain affected by Huntington's disease. The dataset is produced by ",
   a(href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4670106/', 'Labadorf et al., 2015'),
   tabsetPanel(
     # sample tab
@@ -77,7 +77,7 @@ ui <- fluidPage(
              ),
              mainPanel(
                tabsetPanel(
-                 tabPanel('Summary',DTOutput('deg_table')),
+                 tabPanel('Results',DTOutput('deg_table')),
                  tabPanel('Volcano Plot',
                           sidebarPanel(
                             radioButtons('de_x_axis','Choose the column for the x-axis',
